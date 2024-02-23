@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:padding="16dp"
-    android:background="#C40B0B"
+    android:background="#00BCD4"
     android:elevation="4dp">
 
     <ImageView
-        android:id="@+id/luna"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:src="@drawable/luna" />
+        android:id="@+id/imagen"
+        android:layout_width="359dp"
+        android:layout_height="101dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="center"
-        >
+        android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/txtIDDEPRODUCTO"
@@ -66,5 +66,7 @@
             android:textStyle="italic"
             android:layout_gravity="center"
             />
+
+
     </LinearLayout>
-</LinearLayout>
+

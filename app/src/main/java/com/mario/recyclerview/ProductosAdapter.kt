@@ -4,8 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class ProductosAdapter (var context: Context,
     var ListaProducto:MutableList<dtProductos>) :
@@ -29,6 +31,10 @@ class ProductosAdapter (var context: Context,
         init{
             txtpreciomayoreo=itemView.findViewById(R.id.txTPRECIOMAYOREO)
         }
+        lateinit var txtimagen: ImageView
+        init{
+            txtimagen=itemView.findViewById(R.id.imagen)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductosAdapter.vHolder {
@@ -47,6 +53,8 @@ class ProductosAdapter (var context: Context,
         holder.txtdescripción.text=id.descripcion
         holder.txtpreciomenudeo.text=id.preciopormenudeo
         holder.txtpreciomayoreo.text=id.preciopormayoreo
+        Picasso.get().load(id.url).into(holder.txtimagen)
+
     }
 
 }
